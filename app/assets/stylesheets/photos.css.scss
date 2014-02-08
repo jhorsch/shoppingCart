@@ -20,7 +20,8 @@ $background_color: #e8e7ec;
   width: $max_width;
   margin: 0 auto;
   background: white;
-  box-shadow: 3px 3px 3px #fff;
+  border: 1px solid black;
+
 }
 
 body {
@@ -74,6 +75,8 @@ a:hover{
 .banner_image{
   width: 100%;
   margin: 10px 0 10px 0;
+  box-shadow: 3px 3px 10px gray;
+
 }
 
 
@@ -81,7 +84,7 @@ a:hover{
 
 
     width: ($col_width * $num_cols) + ($gutter_width * ($num_cols - 1));
-    // margin-right: $gutter_width;
+    margin-bottom: $gutter_width;
 }
 
 @mixin offset($num_cols) {
@@ -98,16 +101,35 @@ a:hover{
 
 .product_info{
 
+  position: relative;
+
   width: 90%;
   margin: 0 auto;
   img{
         width: 100%;
+        // box-shadow: 5px 5px 20px gray;
+        position: relative;
+
       }
   p{
     font-weight: bold;
+    margin-top: 5px;
   }
 
 }
+
+.photo_title{
+  // display: none;
+}
+.show_photo_title{
+
+  position: absolute;
+  bottom: -2px;
+  left: 5px;
+  color: white;
+}
+
+
 
 
   // &:nth-child(3n+1) {

@@ -14,3 +14,16 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(function(){
+
+
+
+$('img').hover(function(){
+     $(this).find('p').addClass('show_photo_title')
+})
+
+
+
+})
