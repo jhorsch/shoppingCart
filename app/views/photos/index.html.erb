@@ -14,7 +14,8 @@
 <% @photos.each do |photo| %>
   <div class = "product_container">
     <div class='product_info'>
-      <img src="/assets/photo_only/<%= photo.id_num %>.jpg" alt="logo">
+      <a href=<%= photo_url(photo.id) %>><img src="/assets/photo_only/<%= photo.id_num %>.jpg" alt="logo"></a>
+
       <p class="photo_title"><%= photo.title.titleize %></p>
     </div>
   </div>

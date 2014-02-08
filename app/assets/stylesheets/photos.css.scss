@@ -19,10 +19,13 @@ $background_color: #e8e7ec;
   width: $max_width;
   margin: 0 auto;
   background: white;
-  border: 1px solid black;
+  // border: 1px solid black;
 
 }
 
+div, p, nav, section, li, label{
+    border: 1px solid black;
+}
 body {
   font-size: 14px;
  margin-bottom: 10px;
@@ -53,6 +56,7 @@ a:hover{
 
 p{
   margin-bottom: 10px;
+  font-size: 14px;
 }
 
 
@@ -102,6 +106,7 @@ header{
 
     width: ($col_width * $num_cols) + ($gutter_width * ($num_cols - 1));
     margin-bottom: $gutter_width;
+    margin-right: $gutter_width;
 }
 
 @mixin offset($num_cols) {
@@ -110,8 +115,10 @@ header{
 
 .product_container{
       display: inline-block;
-      @include col_grid(4);
-      border: 1px solid black;
+      font-size: 0;
+      width: 400px;
+      // @include col_grid(4);
+          margin: 0px;
       height: 100%;
       vertical-align: top;
 }
@@ -153,12 +160,57 @@ header{
   //    @include offset(1);
   // }
 
+// .detail_container{
+//   float: left;
+// }
+
+.feature_container {
+
+  width: 600px;
+  text-align: center;
+  float:left;
+
+}
+
+.feature{
+
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
+
+
+}
+
+.detail_prod_info_container{
+  width: 500px;
+  text-align: left;
+  clear: both;
+
+
+}
+
+
+.detail_prod_info{
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+
+label{
+
+
+  margin: 10px 10px 0 0;
+  font-weight: bold;
+}
+
+
+
 
 footer{
   padding-top: 10px;
   width: 500px;
   margin: 0 auto;
-  border: 1px solid black;
   text-align: center;
   li{
     display: inline-block;

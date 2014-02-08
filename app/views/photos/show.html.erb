@@ -1,24 +1,54 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @photo.title %>
-</p>
+<div class="banner_image"><%= image_tag 'rsz_pan64.jpg', alt: 'banner-image' %></div>
 
-<p>
-  <strong>Desc:</strong>
-  <%= @photo.desc %>
-</p>
+<p><a href="#">Home</a> > <a href="#">Chicago</a> > <a href="#"><%= @photo.main_cat.titleize  %></a> > <a href="#"><%= @photo.sub_cat.titleize  %></a></p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @photo.price %>
-</p>
+<div class="detail_container">
 
-<p>
-  <strong>Id num:</strong>
-  <%= @photo.id_num %>
-</p>
+<div class='feature_container'>
+  <div class='feature'>
 
-<%= link_to 'Edit', edit_photo_path(@photo) %> |
-<%= link_to 'Back', photos_path %>
+    <p><img src="<%= @photo.image %>" alt=""></p>
+    <p class='artist'>Photographed by Bob Horsch</p>
+    <p class='social_buttons' ><img src='/assets/SocialButtons.jpg'</p>
+
+  </div>
+</div>
+
+
+<div class="detail_prod_info_container">
+  <div class='detail_prod_info'>
+    <h1><%= @photo.title %></h1>
+
+        <table>
+        <tbody>
+            <tr>
+              <td><b><%= label_tag 'choose-photo_size', 'Choose Your Size:'  %></b></td>
+              <td> <%= select_tag 'choose-size', "<option>8x10 Photo Only</option><option>8x10 Photo w/ 11x14 Mat</option><option>8x10 Photo w/ 11x14 Mat - Framed</option>".html_safe %></td>
+            </tr>
+            <tr>
+              <td><%= label_tag 'choose_mat', 'Mat Color:' %></td>
+              <td><%= select_tag 'choose_mat', "<option>Fog / Black</option><option>Bright White</option>".html_safe %></td>
+            </tr>
+            <tr>
+              <td><%= label_tag 'choose_frame', 'Frame Style:' %></td>
+              <td><%= select_tag 'choose_frame', "<option>Classic Black - Thin Rounded</option><option>Classic Black - Wide Flat</option>".html_safe %></td>
+            </tr>
+            <tr>
+              <td><%= label_tag 'price', 'Price:' %></td>
+              <td class='price'>$<%= @photo.price %></td>
+            </tr>
+            <tr>
+              <td><%= label_tag 'qty', 'Quantity:' %></td>
+              <td><%= select_tag 'qty', "<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>".html_safe %></td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <p><%= @photo.desc %></p>
+  </div>
+</div>
+
+</div>
+
