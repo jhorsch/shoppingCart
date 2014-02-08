@@ -2,9 +2,10 @@
 
 
 <div class="banner_image"><%= image_tag 'rsz_pan64.jpg', alt: 'banner-image' %></div>
-<div class='breadcrumbs'>
-  <a href="#">Home</a> > <a href="#">Chicago</a> > <a href="#"><%= @photos.first.main_cat.titleize  %></a> > <a href="#"><%= @photos.first.sub_cat.titleize  %></a>
-</div>
+
+<p><a href="#">Home</a> > <a href="#">Chicago</a> > <a href="#"><%= @photos.first.main_cat.titleize  %></a> > <a href="#"><%= @photos.first.sub_cat.titleize  %></a></p>
+
+
 <h1><%= @photos.first.sub_cat.titleize %> Photography</h1>
 <p>The destruction caused by the Great Chicago Fire led to the largest building boom in the history of the nation. In 1885, the first steel-framed high-rise building, the Home Insurance Building, rose in the city as Chicago ushered in the skyscraper era which would then be followed by many other cities around the world. Today, Chicago's skyline is among the world's tallest and most dense.</p>
 

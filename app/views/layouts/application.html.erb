@@ -4,7 +4,6 @@
   <title>ShoppingCart</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css"> -->
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   <%= csrf_meta_tags %>
 </head>
@@ -21,7 +20,8 @@
   <li><h2>Photo Options</h2></li>
   <li class='shopping_cart'><h2><i class="fa fa-shopping-cart"></i>&nbsp&nbspShopping Cart</h2></li>
 
-<header>
+</header>
+
 <%= yield %>
 
 <footer>
