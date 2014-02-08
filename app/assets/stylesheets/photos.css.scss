@@ -66,6 +66,7 @@ a:hover{
 //       text-align: center;
 // }
 
+
 header{
   li{
     display: inline-block;
@@ -74,12 +75,16 @@ header{
 }
 
 .banner_image{
-  width: 100%;
+  width: 60%;
   margin: 10px 0 10px 0;
   box-shadow: 3px 3px 10px gray;
 
 }
 
+
+.breadcrumbs{
+  margin-top: 20px;
+}
 
 @mixin col_grid($num_cols) {
 
