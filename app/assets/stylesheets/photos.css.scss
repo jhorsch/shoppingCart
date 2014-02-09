@@ -128,7 +128,7 @@ p{
 }
 
 header{
-
+  // position: fixed;
   @include col_grid(11);
 
   li{
@@ -191,7 +191,7 @@ header{
         width: 100%;
         box-shadow: 5px 5px 20px gray;
         position: relative;
-        border-radius: 5px;
+        border-radius: 3px;
 
       }
   p{
@@ -211,13 +211,19 @@ h2 {
 
 .photo_title{
   // display: none;
+  color: white;
+    padding-top: 10px;
+
 }
 .show_photo_title{
-
-  position: absolute;
-  bottom: -2px;
-  left: 5px;
-  color: white;
+  display: block;
+  // position: absolute;
+  // bottom: -2px;
+  // left: 5px;
+  // color: #fff;
+  color: $text_color;
+  text-align: center;
+  padding-top: 10px;
 }
 
 
@@ -258,7 +264,7 @@ h2 {
 .detail_prod_info_container{
   @include col_grid(6);
   margin-right: 0px;
-  // background: green;
+  // background: pink;
 
 
       padding-right: ($gutter_width*3) ;
@@ -272,14 +278,6 @@ h2 {
 }
 
 
-label{
-  margin: 10px 10px 50px 0;
-  font-weight: bold;
-  font-size: 14px;
-  width: 600px;
-  display:inline;
-
-}
 
 
 
@@ -296,8 +294,32 @@ footer{
     display: inline-block;
     margin-right: 30px;
   }
+}
 
+
+.label_container{
+  // background:yellow;
+  text-align: left;
+  font-weight: bold;
+    width: 200px;
+  @include col_grid(2);
+  p{
+    margin-bottom: 16px;
+  }
+}
+
+.field_container{
+  // background: green;
+  text-align: left;
+  @include col_grid(3);
+  margin-right: 0;
+  margin-bottom: 10px;
+  margin-left: -0px;
 
 }
 
+.box0{
+  display:  inline-block;
+  font-size: 0px;
+}
 

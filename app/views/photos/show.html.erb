@@ -20,23 +20,29 @@
 
     <div class="detail_prod_info_container">
       <div class='detail_prod_info'>
-        <h1 class='photo_title'><%= @photo.title %></h1>
+        <h1 class='photo_title_detail'><%= @photo.title %></h1>
+
+  <div class="box0">
+    <div class="label_container">
+      <p class='mylabel'><%= label_tag 'choose-photo_size', 'Choose Your Size:'  %></p>
+      <p class='mylabel'><%= label_tag 'choose_mat', 'Mat Color:' %></p>
+      <p class='mylabel'><%= label_tag 'choose_frame', 'Frame Style:' %></p>
+      <p class='mylabel'><%= label_tag 'price', 'Price:' %></p>
+      <p class='mylabel'><%= label_tag 'qty', 'Quantity:' %></p>
+    </div>
+
+    <div class='field_container'>
+       <p><%= select_tag 'choose-size', "<option>8x10 Photo Only</option><option>8x10 Photo w/ 11x14 Mat</option><option>8x10 Photo w/ 11x14 Mat - Framed</option>".html_safe %></p>
+      <p><%= select_tag 'choose_mat', "<option>Fog / Black</option><option>Bright White</option>".html_safe %></p>
+      <p><%= select_tag 'choose_frame', "<option>Classic Black - Thin Rounded</option><option>Classic Black - Wide Flat</option>".html_safe %></p>
+      <p><%= label_tag '$149', '$149' %></p>
+      <p><%= select_tag 'qty', "<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>".html_safe %></p>
+    </div>
+
+    </div>
 
 
 
-      <p class='mylabel'><%= label_tag 'choose-photo_size', 'Choose Your Size:'  %>
-       <%= select_tag 'choose-size', "<option>8x10 Photo Only</option><option>8x10 Photo w/ 11x14 Mat</option><option>8x10 Photo w/ 11x14 Mat - Framed</option>".html_safe %></p>
-
-      <p class='mylabel'><%= label_tag 'choose_mat', 'Mat Color:' %>
-      <%= select_tag 'choose_mat', "<option>Fog / Black</option><option>Bright White</option>".html_safe %></p>
-
-      <p class='mylabel'><%= label_tag 'choose_frame', 'Frame Style:' %>
-      <%= select_tag 'choose_frame', "<option>Classic Black - Thin Rounded</option><option>Classic Black - Wide Flat</option>".html_safe %></p>
-
-      <p class='mylabel'><%= label_tag 'price', 'Price:' %><%= label_tag '$149', '$149' %></p>
-
-      <p class='mylabel'><%= label_tag 'qty', 'Quantity:' %>
-      <%= select_tag 'qty', "<option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>".html_safe %></p>
 
         <p class = "product_text"><%= @photo.desc %></p>
       </div>
