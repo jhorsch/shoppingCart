@@ -102,16 +102,16 @@ p{
 .shopping_cart{
 
     text-align: right;
-
+    margin-right: -5px;
     &.hover {
-        border: 1px dashed #666;
+      border: 1px dashed #666;
     }
 
     &.droppable {
         background:lightgreen;
     }
 
-    width: 555px;
+
 }
 
 .fa-shopping-cart{
@@ -120,11 +120,13 @@ p{
 }
 
 header{
+
   @include col_grid(11);
-  @include offset(1);
+
   li{
     display: inline-block;
     vertical-align: center;
+    @include offset(1);
   }
 }
 
