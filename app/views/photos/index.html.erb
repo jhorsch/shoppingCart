@@ -1,12 +1,12 @@
 <!-- <div><img src="/app/assets/images/panbw2.jpg" width="600" alt="banner-image"></div> -->
 
 
-<div class="banner_image"><%= image_tag 'rsz_pan64.jpg', alt: 'banner-image' %></div>
+<div class="banner_image"><%= image_tag 'rsz1_pan64.jpg', alt: 'banner-image' %></div>
 
 <p class='breadcrumbs'><a href="#">Home</a> > <a href="#">Chicago</a> > <a href="#"><%= @photos.first.main_cat.titleize  %></a> > <a href="#"><%= @photos.first.sub_cat.titleize  %></a></p>
 
 
-<h1><%= @photos.first.sub_cat.titleize %> Photography</h1>
+<h1 class='sub_cat_title'><%= @photos.first.sub_cat.titleize %> Photography</h1>
 <p class='cat_desc'>The destruction caused by the Great Chicago Fire led to the largest building boom in the history of the nation. In 1885, the first steel-framed high-rise building, the Home Insurance Building, rose in the city as Chicago ushered in the skyscraper era which would then be followed by many other cities around the world. Today, Chicago's skyline is among the world's tallest and most dense.</p>
 
 
@@ -16,7 +16,7 @@
     <div class='product_info'>
       <a href=<%= photo_url(photo.id) %>><img src="/assets/photo_only/<%= photo.id_num %>.jpg" alt="logo"></a>
 
-      <p class="photo_title"><%= photo.title.titleize %></p>
+      <!-- <p class="photo_title"><%= photo.title.titleize %></p> -->
     </div>
   </div>
 <% end %>

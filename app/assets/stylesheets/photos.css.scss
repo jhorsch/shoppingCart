@@ -5,14 +5,17 @@
 @import "library";
 
 $max_width: 1200px;
-$col_width: 75px;
+$col_width: 90px;
 $col_count: 12;
 
 $gutter_width: ($max_width - ($col_count * $col_width)) / ($col_count - 1);
 
 
-$link_color: #0192b5;
+$link_color: #3782C4;
 $background_color: #e8e7ec;
+$text_color: #262620;
+$orange_color:  #E88F04;
+$fontname: 'garamond';
 
 
 .container_body{
@@ -27,18 +30,31 @@ $background_color: #e8e7ec;
 
 div, p, nav, section, li, label{
     // background: yellow;
+    // border:1px solid black;
 }
 body {
-  font-size: 14px;
+  font-size: 16px;
  margin-bottom: 10px;
  background: url('darkwood.jpg') repeat center center ;
+   font-family: $fontname, 'sans-serif';
+   color: $text_color;
+
+}
+
+h1,h2,h3,li{
+   font-family: 'gill sans', 'sans-serif'
 
 }
 
 h1 {
   font-size: 30px;
-  margin-bottom: 10px;
-  margin-left: $gutter_width;
+  margin-bottom: 25px;
+
+
+  color: $orange_color;
+  &.sub_cat_title{
+       margin-left: $gutter_width;;
+  }
 }
 
 h2 {
@@ -61,11 +77,21 @@ a:hover{
 
 p{
   margin-bottom: 10px;
-  font-size: 14px;
+  font-size: 16px;
   &.cat_desc{
     margin-left: $gutter_width;
     margin-right: $gutter_width;
+    margin-bottom: $gutter_width*2;
+    font-size: 16px;
   }
+  &.breadcrumbs{
+    margin-bottom: 20px;
+     margin-left: $gutter_width;
+  }
+  &.product_text{
+    font-size: 20px;
+  }
+
 
 }
 
@@ -83,14 +109,16 @@ p{
         background:lightgreen;
     }
 
-    width: 435px;
+    width: 555px;
+}
+
+.fa-shopping-cart{
+      color: $orange_color;
 
 }
 
-
-
 header{
-  @include col_grid(10);
+  @include col_grid(11);
   @include offset(1);
   li{
     display: inline-block;
@@ -111,15 +139,13 @@ header{
 
 .banner_image{
 
-  margin: -20px 0 20px -2px;
-  box-shadow: 3px 3px 10px gray;
+  margin: -30px 0 20px -10px;
+  box-shadow: 2px 2px 10px black;
 
 }
 
 
-.breadcrumbs{
-  margin-left: $gutter_width;
-}
+
 
 
 
@@ -151,8 +177,9 @@ header{
   margin: 0 auto;
   img{
         width: 100%;
-        // box-shadow: 5px 5px 20px gray;
+        box-shadow: 5px 5px 20px gray;
         position: relative;
+        border-radius: 5px;
 
       }
   p{
@@ -183,26 +210,31 @@ h2 {
 
 
 
+.detail_container{
+  width: 100%;
+  font-size: 0px;
+  div{
 
-  // &:nth-child(3n+1) {
-  //    @include offset(1);
-  // }
+  display: inline-block;
+  vertical-align:  top;
 
-// .detail_container{
-//   float: left;
-// }
+  }
+}
 
 .feature_container {
 
-  width: 600px;
+  @include col_grid(6);
+
   text-align: center;
-  float:left;
+  // background: pink;
+  height: 500px;
+
 
 }
 
 .feature{
 
-  width: 95%;
+
   margin: 0 auto;
   text-align: center;
 
@@ -210,25 +242,31 @@ h2 {
 }
 
 .detail_prod_info_container{
-  width: 500px;
-  text-align: left;
-  clear: both;
+  @include col_grid(6);
+  margin-right: 0px;
+  // background: green;
+    height: 500px;
+
+      padding-right: ($gutter_width*3) ;
 
 
 }
 
 
 .detail_prod_info{
-  width: 90%;
   margin: 0 auto;
 }
 
 
-
 label{
-  margin: 10px 10px 0 0;
+  margin: 10px 10px 50px 0;
   font-weight: bold;
+  font-size: 14px;
+  width: 600px;
+  display:inline;
+
 }
+
 
 
 footer{

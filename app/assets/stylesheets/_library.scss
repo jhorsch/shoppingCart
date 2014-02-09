@@ -18,7 +18,7 @@
 
 
     width: ($col_width * $num_cols) + ($gutter_width * ($num_cols - 1));
-    margin-bottom: $gutter_width;
+    margin-bottom: $gutter_width*4;
     margin-right: $gutter_width;
 }
 
