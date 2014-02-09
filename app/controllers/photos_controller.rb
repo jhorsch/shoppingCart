@@ -4,7 +4,7 @@ class PhotosController < ApplicationController
   # GET /photos
   # GET /photos.json
   def index
-    @photos = Photo.where(sub_cat: 'black & white chicago - horizontal')[0..14]
+    @photos = Photo.where(sub_cat: 'black & white chicago - horizontal')[0..15]
 
   end
 

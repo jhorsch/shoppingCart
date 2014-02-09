@@ -5,6 +5,9 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  <script src="/js/jquery.min.js"></script>
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="/js/global.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -14,12 +17,13 @@
 
 <header>
 
-  <li><a href=<%= root_url %>><img src="/assets/horschlogo.jpg" alt="logo" class='logoimage'></a></li>
-  <li><h2>Browse All Photos</h2></li>
-  <li><h2>The Photographers</h2></li>
-  <li><h2>Photo Options</h2></li>
-  <li class='shopping_cart'><h2><i class="fa fa-shopping-cart"></i>&nbsp&nbspShopping Cart</h2></li>
-
+  <a href=<%= root_url %>><img src="/assets/horschlogo.jpg" alt="logo" class='logoimage'></a>
+    <nav class="topbar">
+    <li><h2>Browse All Photos</h2></li>
+    <li><h2>The Photographers</h2></li>
+    <li><h2>Photo Options</h2></li>
+    <li class='shopping_cart'><h2><i class="fa fa-shopping-cart"></i>&nbsp&nbspShopping Cart</h2></li>
+  </nav>
 </header>
 
 <%= yield %>

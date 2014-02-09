@@ -16,24 +16,29 @@ $background_color: #e8e7ec;
 
 
 .container_body{
+  position: relative;
   width: $max_width;
   margin: 0 auto;
-  background: white;
-  // border: 1px solid black;
+  padding-top: 25px;
+   background: white;
+
 
 }
 
 div, p, nav, section, li, label{
-    border: 1px solid black;
+    // background: yellow;
 }
 body {
   font-size: 14px;
  margin-bottom: 10px;
+ background: url('darkwood.jpg') repeat center center ;
+
 }
 
 h1 {
   font-size: 30px;
   margin-bottom: 10px;
+  margin-left: $gutter_width;
 }
 
 h2 {
@@ -57,77 +62,92 @@ a:hover{
 p{
   margin-bottom: 10px;
   font-size: 14px;
+  &.cat_desc{
+    margin-left: $gutter_width;
+    margin-right: $gutter_width;
+  }
+
 }
 
 
 
-// .shopping_cart{
-//       position: absolute;
-//       top: 20px;
-//       right: 110px;
-//       text-align: right;
-//       vertical-align: center;
-//       padding-top: 10px;
-//       width: 600px;
-//       height: 50px;
-//       border: 2px solid black;
-//       text-align: center;
-// }
+.shopping_cart{
+
+    text-align: right;
+
+    &.hover {
+        border: 1px dashed #666;
+    }
+
+    &.droppable {
+        background:lightgreen;
+    }
+
+    width: 435px;
+
+}
+
 
 
 header{
+  @include col_grid(10);
+  @include offset(1);
   li{
     display: inline-block;
-    margin-right: 20px;
     vertical-align: center;
   }
 }
 
 .logoimage{
 
+  position: absolute;
+  top: 10px;
+  left: 10px;
   width: 75px;
-  margin: 10px;
+
 }
+
+
 
 .banner_image{
 
-  margin: 10px 0 10px 0;
+  margin: -20px 0 20px -2px;
   box-shadow: 3px 3px 10px gray;
 
 }
 
 
 .breadcrumbs{
-  margin-top: 20px;
+  margin-left: $gutter_width;
 }
 
-@mixin col_grid($num_cols) {
 
 
-    width: ($col_width * $num_cols) + ($gutter_width * ($num_cols - 1));
-    margin-bottom: $gutter_width;
-    margin-right: $gutter_width;
+
+.jeff {
+    font-size: 0;
 }
 
-@mixin offset($num_cols) {
-    margin-left: ($col_width + $gutter_width) * $num_cols;
-}
 
 .product_container{
       display: inline-block;
-      font-size: 0;
-      width: 400px;
-      // @include col_grid(4);
-          margin: 0px;
+
+      // width: 400px;
+      @include col_grid(3);
+
       height: 100%;
       vertical-align: top;
+
+      &:nth-of-type(4n) {
+        margin-right: 0;
+    }
 }
 
 .product_info{
 
   position: relative;
 
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
   img{
         width: 100%;
@@ -139,6 +159,14 @@ header{
     font-weight: bold;
     margin-top: 5px;
   }
+
+
+
+h2 {
+    font-size: 30px;
+}
+
+
 
 }
 
@@ -198,23 +226,20 @@ header{
 
 
 label{
-
-
   margin: 10px 10px 0 0;
   font-weight: bold;
 }
 
 
-
-
 footer{
   padding-top: 10px;
-  width: 500px;
-  margin: 0 auto;
+  width: 100%;
+
   text-align: center;
   li{
     display: inline-block;
   }
+  background: #ccc;
 }
 
 

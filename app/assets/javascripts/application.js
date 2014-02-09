@@ -16,14 +16,34 @@
 //= require_tree .
 
 
-$(function(){
+// $(function(){
 
 
 
-$('img').hover(function(){
-     $(this).find('p').addClass('show_photo_title')
-})
+// $('img').hover(function(){
+//      $(this).find('p').addClass('show_photo_title')
+// })
 
 
 
-})
+// })
+
+
+
+
+$(function () {
+    // Use a "clone" helper so the original element stays in place as we drag.
+    $('.feature_image').draggable({
+        helper: "clone"
+    });
+
+    $( ".shopping_cart" ).droppable({
+        activeClass: "droppable",
+        hoverClass: "hover",
+        tolerance: "touch",
+        drop: function( event, ui ) {
+            var listObj = $(this).find('img');
+            listObj.append(ui.draggable.clone());
+        }
+    });
+});

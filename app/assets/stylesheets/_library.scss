@@ -14,6 +14,17 @@
     border-width: $thickness;
 }
 
+@mixin col_grid($num_cols) {
+
+
+    width: ($col_width * $num_cols) + ($gutter_width * ($num_cols - 1));
+    margin-bottom: $gutter_width;
+    margin-right: $gutter_width;
+}
+
+@mixin offset($num_cols) {
+    margin-left: ($col_width + $gutter_width) * $num_cols;
+}
 
 
 

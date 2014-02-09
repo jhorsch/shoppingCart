@@ -1,14 +1,14 @@
 
 <div class="banner_image"><%= image_tag 'rsz_pan64.jpg', alt: 'banner-image' %></div>
 
-<p><a href="#">Home</a> > <a href="#">Chicago</a> > <a href="#"><%= @photo.main_cat.titleize  %></a> > <a href="#"><%= @photo.sub_cat.titleize  %></a></p>
+<p class='breadcrumbs'><a href="#">Home</a> > <a href="#">Chicago</a> > <a href="#"><%= @photo.main_cat.titleize  %></a> > <a href="#"><%= @photo.sub_cat.titleize  %></a></p>
 
 <div class="detail_container">
 
 <div class='feature_container'>
   <div class='feature'>
 
-    <p><img src="<%= @photo.image %>" alt=""></p>
+    <p><img src="<%= @photo.image %>" alt="" class='feature_image'></p>
     <p class='artist'>Photographed by Bob Horsch</p>
     <p class='social_buttons' ><img src='/assets/SocialButtons.jpg'</p>
 
