@@ -47,13 +47,14 @@ h1,h2,h3,li{
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 52px;
   margin-bottom: 25px;
 
 
   color: $orange_color;
   &.sub_cat_title{
        margin-left: $gutter_width;;
+       color: $text_color;
   }
 }
 
@@ -75,14 +76,21 @@ a:hover{
 
 }
 
+.center{
+  text-align: center;
+}
 p{
   margin-bottom: 10px;
   font-size: 16px;
   &.cat_desc{
     margin-left: $gutter_width;
     margin-right: $gutter_width;
-    margin-bottom: $gutter_width*2;
-    font-size: 16px;
+    margin-bottom: $gutter_width*3;
+    font-size: 20px;
+    line-height: 40px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 15px 30px;
   }
   &.breadcrumbs{
     margin-bottom: 20px;
@@ -143,7 +151,7 @@ header{
 
 .banner_image{
 
-  margin: -30px 0 20px -10px;
+  margin: -30px 0 30px -10px;
   box-shadow: 2px 2px 10px black;
 
 }
@@ -163,12 +171,12 @@ header{
       display: inline-block;
 
       // width: 400px;
-      @include col_grid(3);
+      @include col_grid(4);
 
       height: 100%;
       vertical-align: top;
 
-      &:nth-of-type(4n) {
+      &:nth-of-type(3n) {
         margin-right: 0;
     }
 }
@@ -231,7 +239,6 @@ h2 {
 
   text-align: center;
   // background: pink;
-  height: 500px;
 
 
 }
@@ -252,7 +259,7 @@ h2 {
   @include col_grid(6);
   margin-right: 0px;
   // background: green;
-    height: 500px;
+
 
       padding-right: ($gutter_width*3) ;
 
