@@ -90,6 +90,8 @@ p{
   }
   &.product_text{
     font-size: 20px;
+    padding-top: 10px;
+    border-top: 2px solid $text_color;
   }
 
 
@@ -237,6 +239,9 @@ h2 {
 
   margin: 0 auto;
   text-align: center;
+  img{
+
+  }
 
 
 }
@@ -270,14 +275,20 @@ label{
 
 
 footer{
-  padding-top: 10px;
-  width: 100%;
+  @include col_grid(12);
+
+  padding: 10px 0 10px 0;
+
+  background: $text_color;
+  color: white;
 
   text-align: center;
   li{
     display: inline-block;
+    margin-right: 30px;
   }
-  background: #ccc;
+
+
 }
 
 
