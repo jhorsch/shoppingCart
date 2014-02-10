@@ -210,20 +210,27 @@ h2 {
 }
 
 .photo_title{
-  // display: none;
-  color: white;
-    padding-top: 10px;
+  display: none;
+    // padding-top: 10px;
 
 }
 .show_photo_title{
   display: block;
-  // position: absolute;
-  // bottom: -2px;
-  // left: 5px;
-  // color: #fff;
-  color: $text_color;
+  position: absolute;
+  bottom: 0px;
+
+
+  color: #ccc;
+  width: 100%;
+  background: $text_color;
   text-align: center;
-  padding-top: 10px;
+  vertical-align: center;
+  padding: 10px 0;
+  margin-bottom: 0px;
+  opacity: .85;
+  font-weight: normal;
+  border-radius: 0 0 3px 3px;
+  // padding-top: 10px;
 }
 
 
@@ -247,17 +254,18 @@ h2 {
   // background: pink;
 
 
+
+
+
 }
 
 .feature{
 
-
   margin: 0 auto;
   text-align: center;
-  img{
-
-  }
-
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in;
+  cursor: zoom-in;
 
 }
 
@@ -314,7 +322,7 @@ footer{
   @include col_grid(3);
   margin-right: 0;
   margin-bottom: 10px;
-  margin-left: -0px;
+
 
 }
 

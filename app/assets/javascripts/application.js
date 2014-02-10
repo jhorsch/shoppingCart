@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.magnific-popup
 //= require_tree .
 
 
@@ -20,7 +21,6 @@ $(function(){
 
 $('.product_info img').hover(function(){
 
-    console.log($(this).next())
      $(this).next().addClass('show_photo_title')
      // $(this).find('p').toggleClass('show_product_title');
 });
@@ -28,12 +28,14 @@ $('.product_info img').hover(function(){
 
 $('.product_info img' ).mouseout(function(){
 
-          $(this).next().removeClass('show_photo_title')
+      $(this).next().removeClass('show_photo_title')
 
      // $(this).find('p').toggleClass('show_product_title');
 });
 
 });
+
+
 
 
 
@@ -70,3 +72,5 @@ $('.product_info img' ).mouseout(function(){
 //         }
 //     });
 // });
+
+
