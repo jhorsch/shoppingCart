@@ -22,6 +22,7 @@ $(function(){
 $('.product_info img').hover(function(){
 
      $(this).next().addClass('show_photo_title')
+     // $('show_photo_title').css('transition','all 3s ease' );
      // $(this).find('p').toggleClass('show_product_title');
 });
 

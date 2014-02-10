@@ -212,6 +212,7 @@ h2 {
 .photo_title{
   display: none;
     // padding-top: 10px;
+    transition-duration: 3s;
 
 }
 .show_photo_title{
@@ -228,6 +229,7 @@ h2 {
   padding: 10px 0;
   margin-bottom: 0px;
   opacity: .85;
+    transition-duration: 3s;
   font-weight: normal;
   border-radius: 0 0 3px 3px;
   // padding-top: 10px;
@@ -329,5 +331,31 @@ footer{
 .box0{
   display:  inline-block;
   font-size: 0px;
+}
+.photo_title_detail{
+  color: $text_color;
+}
+.addcart{
+
+  width: 400px;
+  height: 60px;
+  background: $orange_color;
+  color: white;
+  font-size: 22px;
+  text-align: center;
+  vertical-align: center;
+  text-decoration: none;
+
+  border-radius: 5px;
+  border: 1px solid #DE890B;
+  box-shadow: 1px 1px 1px gray;
+  margin: -30px 0 20px 0;
+  cursor: pointer;
+  outline: none;
+  &:hover{
+    background:  #DE890B;
+  }
+
+
 }
 
