@@ -1,3 +1,18 @@
+
+
+$max_width: 1200px;
+$col_width: 90px;
+$col_count: 12;
+
+$gutter_width: ($max_width - ($col_count * $col_width)) / ($col_count - 1);
+
+
+$link_color: #3782C4;
+$background_color: #e8e7ec;
+$text_color: #262620;
+$orange_color:  #E88F04;
+$fontname: 'garamond';
+
 @mixin bg-size($size: 100% auto) {
     -webkit-background-size: $size;
     -moz-background-size: $size;

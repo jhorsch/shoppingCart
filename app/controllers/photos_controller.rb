@@ -11,6 +11,9 @@ class PhotosController < ApplicationController
   # GET /photos/1
   # GET /photos/1.json
   def show
+
+      @photos = Photo.where(sub_cat: 'black & white chicago - horizontal').shuffle.take(8)
+
   end
 
   # GET /photos/new

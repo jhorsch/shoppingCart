@@ -58,6 +58,15 @@
       </div>
     </div>
 
+<div class='ribbon-wrapper'>
+<h4 class='title_showcase'>Customers Also Viewed</h4>
+    <div class="ribbon container_backdrop">
+  <% @photos.each do |photo| %>
+    <%= link_to image_tag(photo.image, class: "poster-container"), photo_url(photo.id_num) %>
+  <% end %>
+</div>
+</div>
+
 <script>
 
 $(function() {

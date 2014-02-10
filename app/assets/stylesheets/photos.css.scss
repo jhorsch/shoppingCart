@@ -4,18 +4,7 @@
 
 @import "library";
 
-$max_width: 1200px;
-$col_width: 90px;
-$col_count: 12;
 
-$gutter_width: ($max_width - ($col_count * $col_width)) / ($col_count - 1);
-
-
-$link_color: #3782C4;
-$background_color: #e8e7ec;
-$text_color: #262620;
-$orange_color:  #E88F04;
-$fontname: 'garamond';
 
 
 .container_body{
@@ -99,7 +88,7 @@ p{
   &.product_text{
     font-size: 20px;
     padding-top: 20px;
-    border-top: 2px solid $text_color;
+    border-top: 1px solid #ccc;
   }
 
 
@@ -364,3 +353,18 @@ footer{
 
 }
 
+
+.container_backdrop{
+
+ background-color: white;
+ /*background-color: #F0F0EC;*/
+  border-left: 1px solid #D6D6D6;
+  border-top: 1px solid #D6D6D6;
+  border-right: 2px solid #D6D6D6;
+  border-bottom: 2px solid #D6D6D6;
+  border-radius: 5px;
+  margin: 8px;
+  padding: 8px;
+  border-radius: 5px;
+
+}
