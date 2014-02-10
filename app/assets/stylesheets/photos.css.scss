@@ -24,9 +24,11 @@ div, p, nav, section, li, label{
 body {
   font-size: 16px;
  margin-bottom: 10px;
- background: url('darkwood.jpg') repeat center center ;
+ background: $text_color;
    font-family: $fontname, 'sans-serif';
    color: $text_color;
+
+
 
 }
 
@@ -282,11 +284,12 @@ h2 {
 
 footer{
   @include col_grid(12);
+  margin-bottom: 0px;
 
   padding: 10px 0 10px 0;
 
-  background: $text_color;
-  color: white;
+  background: #ccc;
+  color: $text_color;
 
   text-align: center;
   li{
