@@ -19,17 +19,17 @@
 
 $(function(){
 
-$('.product_info img').hover(function(){
+$('.product_info a').hover(function(){
 
-     $(this).next().addClass('show_photo_title')
+     $(this).siblings().addClass('show_photo_title')
      // $('show_photo_title').css('transition','all 3s ease' );
      // $(this).find('p').toggleClass('show_product_title');
 });
 
 
-$('.product_info img' ).mouseout(function(){
+$('.product_info a' ).mouseout(function(){
 
-      $(this).next().removeClass('show_photo_title')
+      $(this).siblings().removeClass('show_photo_title')
 
      // $(this).find('p').toggleClass('show_product_title');
 });

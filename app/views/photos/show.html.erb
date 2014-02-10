@@ -1,6 +1,7 @@
 
 <div class="banner_image"><%= image_tag 'rsz1_pan64.jpg', alt: 'banner-image' %></div>
 
+
 <p class='breadcrumbs'><a href="<%= root_url %>">Home</a> > <a href="<%= root_url %>">Chicago</a> > <a href="<%= root_url %>"><%= @photo.main_cat.titleize  %></a> > <a href="<%= root_url %>"><%= @photo.sub_cat.titleize  %></a></p>
 
 <div class="detail_container">
@@ -12,6 +13,9 @@
         <p><a href='/assets/photo_only/<%= @photo.id_num %>.jpg' class='image-link'>
           <img class='feature' src='<%= @photo.image %>'>
         </a></p>
+
+
+
 
 
 
