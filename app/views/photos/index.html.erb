@@ -12,19 +12,17 @@
 
 <section class='jeff'>
 <% @photos.each do |photo| %>
-  <div class = "product_container">
-    <div class='product_info'>
-
-
-
-<a href=<%= photo_url(photo.id) %>><%= image_tag "#{photo.id_num.downcase}.jpg", alt: "#{photo.title}" %></a>
-
-
+  <div  class = "product_container">
+    <div  class='product_info'>
+      <a href=<%= photo_url(photo.id) %>><%= image_tag "#{photo.id_num.downcase}.jpg", alt: "#{photo.title}" %></a>
       <p class="photo_title"><%= photo.title.titleize %></p>
     </div>
   </div>
 <% end %>
 </section>
+
+
+
 
 
 

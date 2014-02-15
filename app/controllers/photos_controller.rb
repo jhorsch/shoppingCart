@@ -6,6 +6,8 @@ class PhotosController < ApplicationController
   def index
     @photos = Photo.where(sub_cat: 'black & white chicago - horizontal')[1..15]
 
+
+
   end
 
   # GET /photos/1

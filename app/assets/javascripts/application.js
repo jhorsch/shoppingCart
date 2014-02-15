@@ -39,6 +39,19 @@ $('.product_info a' ).mouseout(function(){
 
 
 
+$(function() {
+
+  $('.image-link').magnificPopup({
+
+    type:'image'
+
+  });
+});
+
+
+
+
+
 
 // $('.product_info .aaa').focusout(function(){
 

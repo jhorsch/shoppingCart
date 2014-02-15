@@ -46,6 +46,9 @@ h1 {
   &.sub_cat_title{
        margin-left: $gutter_width;;
        color: $text_color;
+       border-bottom: 1px solid #ccc;
+       padding-bottom: 30px;
+        margin-bottom: 3px;
   }
 }
 
