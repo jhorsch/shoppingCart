@@ -9,11 +9,12 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+
+ *= require magnific-popup
+ *= require reset
+
  *= require_tree .
  */
 
-@import "reset";
-@import "library";
-@import "detailpage";
 
-@import "magnific-popup"
+
